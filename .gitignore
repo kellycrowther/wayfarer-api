@@ -2,6 +2,7 @@
 *.db
 *~
 .*
+*.sqlite3
 
 /site/
 /htmlcov/
@@ -9,7 +10,7 @@
 /build/
 /dist/
 /*.egg-info/
-/env/
+/venv/
 MANIFEST
 coverage.*
 
