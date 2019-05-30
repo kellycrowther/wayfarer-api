@@ -44,7 +44,8 @@ INSTALLED_APPS = [
     'rest_auth.registration',
     'allauth',
     'allauth.account',
-    'api',
+    'todo',
+    'wayfarerAPI'
 ]
 
 REST_FRAMEWORK = {

@@ -1,6 +1,6 @@
 from rest_framework import generics
 
-from api import models
+from todo import models
 from . import serializers
 
 
