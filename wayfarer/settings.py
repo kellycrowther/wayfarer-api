@@ -50,7 +50,8 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'todo',
-    'wayfarerAPI'
+    'wayfarerAPI',
+    'waypoints.apps.WaypointsConfig'
 ]
 
 REST_FRAMEWORK = {
