@@ -32,9 +32,9 @@ class Waypoint(models.Model):
   rating = models.IntegerField(null=True, blank=True)
   favorite = models.IntegerField(null=True, blank=True)
   waypointType = models.IntegerField(choices=WAYPOINT_TYPE_CHOICES, default=0)
-  photo = models.TextField(validators=[URLValidator()])
-  address = models.TextField()
-  state = models.TextField()
+  photo = models.TextField(blank=True, default='', validators=[URLValidator()])
+  address = models.TextField(blank=True, default='')
+  state = models.TextField(blank=True, default='')
   zipCode = models.IntegerField(null=True, blank=True)
   price = models.IntegerField(null=True, blank=True)
 
