@@ -21,4 +21,5 @@ urlpatterns = [
     path('api/v1/', include('auth-app.urls')),
     path('api/v1/', include('waypoints.urls')),
     path('api/v1/', include('events.urls')),
+    path('api/v1/', include('guest_books.urls'))
 ]

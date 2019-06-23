@@ -53,6 +53,7 @@ INSTALLED_APPS = [
     'auth-app.apps.AuthAppConfig',
     'waypoints.apps.WaypointsConfig',
     'events.apps.EventsConfig',
+    'guest_books.apps.GuestBooksConfig'
 ]
 
 REST_FRAMEWORK = {
