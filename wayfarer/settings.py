@@ -50,7 +50,7 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'todo',
-    'wayfarerAPI',
+    'auth-app.apps.AuthAppConfig',
     'waypoints.apps.WaypointsConfig'
 ]
 
