@@ -51,7 +51,8 @@ INSTALLED_APPS = [
     'allauth.account',
     'todo',
     'auth-app.apps.AuthAppConfig',
-    'waypoints.apps.WaypointsConfig'
+    'waypoints.apps.WaypointsConfig',
+    'events.apps.EventsConfig',
 ]
 
 REST_FRAMEWORK = {
