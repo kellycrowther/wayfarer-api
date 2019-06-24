@@ -15,3 +15,6 @@ class GuestBook(models.Model):
   # figure out how to relate waypoint to guest book
   location = Waypoint()
 
+  def __str__(self):
+    return self.title
+

@@ -38,3 +38,6 @@ class Waypoint(models.Model):
   zipCode = models.IntegerField(null=True, blank=True)
   price = models.IntegerField(null=True, blank=True)
 
+  def __str__(self):
+    return self.title
+

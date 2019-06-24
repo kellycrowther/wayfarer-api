@@ -1,4 +1,5 @@
 from django.db import models
+from waypoints.models import Waypoint
 
 class Event(models.Model):
   created = models.DateTimeField(auto_now_add=True)
@@ -6,4 +7,8 @@ class Event(models.Model):
   description = models.TextField()
   time = models.DateTimeField()
   photo = models.TextField()
+  waypoints = models.ForeignKey(Waypoint, blank=True, null=True, on_delete=models.CASCADE)
+
+  def __str__(self):
+    return self.name
 
