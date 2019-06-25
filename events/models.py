@@ -7,7 +7,7 @@ class Event(models.Model):
   description = models.TextField()
   time = models.DateTimeField()
   photo = models.TextField()
-  waypoints = models.ForeignKey(Waypoint, blank=True, null=True, on_delete=models.CASCADE)
+  waypoint_id = models.ForeignKey(Waypoint, related_name='events', blank=True, null=True, on_delete=models.CASCADE)
 
   def __str__(self):
     return self.name
