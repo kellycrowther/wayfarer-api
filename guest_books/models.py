@@ -12,8 +12,7 @@ class GuestBook(models.Model):
   # need to figure out how to add photos to rest framework
   # photos = serializers.ListField(child=serializers.CharField(blank=True, default='', validators=[URLValidator()]))
   
-  # figure out how to relate waypoint to guest book
-  location = Waypoint()
+  waypoint_id = models.ForeignKey(Waypoint, related_name='guest_books', null=True, blank=True, on_delete=models.CASCADE)
 
   def __str__(self):
     return self.title
