@@ -5,7 +5,7 @@ from rest_framework.permissions import IsAuthenticated
 
 
 class WaypointList(generics.ListCreateAPIView):
-  permission_classes = (IsAuthenticated,)
+  # permission_classes = (IsAuthenticated,)
   queryset = Waypoint.objects.all()
   serializer_class = WaypointSerializer
 
