@@ -24,6 +24,16 @@ WAYPOINT_ACTIVITES = (
   (6, 'Nightlife'),
 )
 
+class Coordinate(models.Model):
+  created = models.DateTimeField(auto_now_add=True)
+  latitude = models.DecimalField(
+      max_digits=20, decimal_places=17, null=True, blank=True)
+  longitude = models.DecimalField(
+      max_digits=20, decimal_places=17, null=True, blank=True)
+
+  def __str__(self):
+    return 'Latitude: ' + str(self.latitude) + 'Longitude: ' + str(self.longitude)
+
 class Waypoint(models.Model):
   created = models.DateTimeField(auto_now_add=True)
   title = models.CharField(max_length=100, blank=True, default='')
@@ -37,6 +47,8 @@ class Waypoint(models.Model):
   state = models.TextField(blank=True, default='')
   zipCode = models.IntegerField(null=True, blank=True)
   price = models.IntegerField(null=True, blank=True)
+  coordinate = models.OneToOneField(
+      Coordinate, blank=True, null=True, on_delete=models.CASCADE)
 
   def __str__(self):
     return self.title
