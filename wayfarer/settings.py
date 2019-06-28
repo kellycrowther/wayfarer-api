@@ -62,7 +62,8 @@ REST_FRAMEWORK = {
     ],
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework.authentication.TokenAuthentication',
-    )
+    ),
+    'COERCE_DECIMAL_TO_STRING': False,
 }
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
